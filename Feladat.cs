@@ -34,7 +34,24 @@ namespace Feladat
             {
                 if (fordulo == f.fordulo)
                 {
-                    Console.WriteLine($"Hazai gól: {f.hazaigol}, Vendég gól: {f.vendeggol}, Hazai gól félidőben: {f.felidoh}, Vendég gól félidőben: {f.vendegh}, Hazai csapat: {f.hazainev}, Vendég csapat: {f.vendegnev}");
+                    Console.WriteLine($"{f.hazainev} - {f.vendegnev}: {f.hazaigol} - {f.vendeggol} ({f.felidoh} - {f.vendegh})");
+                }
+            }
+        }
+
+        public void Feladat2()
+        {
+            Console.WriteLine("Második félidőben megfordított meccsek: ");
+            foreach(var f in Meccsek)
+            {
+                if(f.felidoh > f.vendegh && f.hazaigol < f.vendeggol)
+                {
+                    Console.WriteLine($"{f.hazainev} - {f.vendegnev}: {f.hazaigol} - {f.vendeggol} ({f.felidoh} - {f.vendegh}) Győztes: {f.hazainev}");
+                }
+
+                else if(f.felidoh < f.vendegh && f.hazaigol > f.vendeggol)
+                {
+                    Console.WriteLine($"{f.hazainev} - {f.vendegnev}: {f.hazaigol} - {f.vendeggol} ({f.felidoh} - {f.vendegh}) Győztes: {f.vendegnev}");
                 }
             }
         }

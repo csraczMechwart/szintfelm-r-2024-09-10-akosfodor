@@ -9,6 +9,7 @@ namespace Feladat
             Feladat t = new Feladat();
             t.GetData("meccs.txt");
             t.Feladat1();
+            t.Feladat2();
         }
     }
 }
