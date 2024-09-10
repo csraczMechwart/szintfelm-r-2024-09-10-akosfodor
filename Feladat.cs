@@ -55,5 +55,18 @@ namespace Feladat
                 }
             }
         }
+
+        public void Feladat3()
+        {
+            Console.WriteLine("Csapat neve: ");
+            string csapatnev = Console.ReadLine();
+            foreach(var cs in Meccsek)
+            {
+                if(csapatnev.ToLower() != cs.hazainev)
+                {
+                    csapatnev = "Lelkesek";
+                }
+            }
+        }
     }
 }
