@@ -25,5 +25,18 @@ namespace Feladat
                 Meccsek.Add(new Foci(f, hg, vg, hf, vf, h, v));
             }
         }
+
+        public void Feladat1() 
+        {
+            Console.WriteLine("Egy forduló száma: ");
+            int fordulo = Convert.ToInt32(Console.ReadLine());
+            foreach(var f in Meccsek)
+            {
+                if (fordulo == f.fordulo)
+                {
+                    Console.WriteLine($"Hazai gól: {f.hazaigol}, Vendég gól: {f.vendeggol}, Hazai gól félidőben: {f.felidoh}, Vendég gól félidőben: {f.vendegh}, Hazai csapat: {f.hazainev}, Vendég csapat: {f.vendegnev}");
+                }
+            }
+        }
     }
 }
